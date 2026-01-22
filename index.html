@@ -3,10 +3,17 @@
 <head>    
 <meta charset="UTF-8" />    
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>    
-<title>Historien Bakom Musiken – Meriter & dokumentation</title>    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">    <!-- Favicon -->    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">    
+<title>Historien Bakom Musiken – Meriter & dokumentation</title>    
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">    
+
+<!-- Favicon -->    
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">    
 <link rel="shortcut icon" href="/favicon.png">    
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">    
-<meta name="theme-color" content="#0b0e14">    <style>    
+<meta name="theme-color" content="#0b0e14">    
+
+<style>    
 :root{    
   --bg:#0b0e14;    
   --gold:#d4b36a;    
@@ -14,28 +21,27 @@
   --text:#e6e6e6;    
   --muted:#9aa0a6;    
 }    
-    
+
 *{box-sizing:border-box;margin:0;padding:0}    
-    
+
 body{    
   background:radial-gradient(ellipse at top,#141a26 0%,#0b0e14 60%);    
   color:var(--text);    
   font-family:Inter,system-ui,Arial,sans-serif;    
   line-height:1.6;    
 }    
-    
+
 .container{    
   max-width:1100px;    
   margin:auto;    
   padding:60px 24px 100px;    
 }    
-    
+
 header{    
   text-align:center;    
   margin-bottom:50px;    
 }    
-    
-/* LOGOTYP – plats reserverad */    
+
 .site-logo{    
   display:block;    
   margin:0 auto 26px auto;    
@@ -43,7 +49,7 @@ header{
   width:100%;    
   opacity:0.95;    
 }    
-    
+
 header h1{    
   font-family:"Playfair Display",serif;    
   color:var(--gold);    
@@ -51,17 +57,12 @@ header h1{
   letter-spacing:0.5px;    
   margin-bottom:12px;    
 }    
-    
+
 header p{    
   color:var(--muted);    
   font-size:16px;    
 }    
-    
-section{    
-  display:block;    
-}    
-    
-/* FIXAD RUBRIKPLACERING */    
+
 .section-title{    
   font-family:"Playfair Display",serif;    
   color:var(--gold-soft);    
@@ -70,8 +71,7 @@ section{
   max-width:820px;    
   text-align:left;    
 }    
-    
-/* Om projektet */    
+
 .project-box{    
   max-width:820px;    
   margin:0 auto 70px auto;    
@@ -81,27 +81,25 @@ section{
   border-radius:18px;    
   box-shadow:0 20px 60px rgba(0,0,0,0.45);    
 }    
-    
+
 .project-box p{    
   margin-bottom:14px;    
   color:#e3e3e3;    
 }    
-    
+
 .project-meta{    
   margin-top:18px;    
   color:var(--gold-soft);    
   font-size:14px;    
   letter-spacing:0.04em;    
 }    
-    
+
 .posts{    
   display:grid;    
   grid-template-columns:repeat(auto-fit,minmax(320px,1fr));    
   gap:40px;    
-  align-items:start;    
 }    
-    
-/* Card wrapper */    
+
 .embed-wrap{    
   background:linear-gradient(180deg,#121826,#0d121c);    
   border:1px solid rgba(212,179,106,0.25);    
@@ -110,7 +108,7 @@ section{
   box-shadow:0 20px 60px rgba(0,0,0,0.45);    
   overflow:hidden;    
 }    
-    
+
 .embed-wrap::before{    
   content:"Dokumenterat genomslag";    
   display:block;    
@@ -120,80 +118,91 @@ section{
   color:var(--gold-soft);    
   margin-bottom:14px;    
 }    
-    
-/* Instagram embed fix */    
-.embed-wrap .instagram-media{    
-  max-width:100% !important;    
-  width:100% !important;    
-  margin:0 auto !important;    
-  border-radius:10px !important;    
-}    
-    
-.embed-wrap iframe{    
-  max-width:100% !important;    
-  width:100% !important;    
-}    
-    
-/* Mobiloptimering */    
+
+/***** NYTT – KOMPLETTERANDE BEVIS *****/
+.evidence-stack{
+  max-width:820px;
+  margin:0 auto 80px auto;
+  display:grid;
+  gap:26px;
+}
+
+.evidence-stack img{
+  width:100%;
+  height:auto;
+  border-radius:14px;
+  border:1px solid rgba(212,179,106,0.25);
+  box-shadow:0 20px 60px rgba(0,0,0,0.45);
+  background:#0d121c;
+}
+/***** SLUT NYTT *****/
+
 @media (max-width:600px){    
   header h1{ font-size:32px; }    
-    
   .container{ padding:40px 16px 80px; }    
-    
-  .embed-wrap{ padding:14px 10px 18px; }    
-    
   .project-box{ padding:22px 18px 26px; }    
-    
   .site-logo{ max-width:140px; }    
 }    
-    
+
 footer{    
   margin-top:90px;    
   text-align:center;    
   color:var(--muted);    
   font-size:13px;    
 }    
-</style>    </head>    
-<body>    <div class="container">    <header>    
-  <!-- LOGOTYP: aktivera när filen finns -->    <img src="/assets/logo.png"    
-alt="Historien bakom musiken – logotyp"    
-class="site-logo">
+</style>    
+</head>    
 
+<body>    
+<div class="container">    
+
+<header>    
+  <img src="/assets/logo.png" alt="Historien bakom musiken – logotyp" class="site-logo">
   <h1>Historien bakom musiken</h1>    
   <p>Meritarkiv & offentlig dokumentation av projektets utveckling och genomslag</p>    
-</header>    <section>    
-  <div class="section-title">Om projektet</div>      <div class="project-box">    
-    <p><strong>Historien Bakom Musiken</strong> är en svensk podcast om hur musik faktiskt skapas, berättad ur perspektivet av en aktiv artist och producent.</p>    <p>Podcasten lanserades i december 2023 och har nått förstaplats (#1) på Spotify-topplistor i Sverige under 2023 och 2024. Den följs av lyssnare som vill förstå processen bakom färdiga låt[...]</p>    
+</header>    
 
-<p>Projektet omfattar podcastavsnitt, utdrag och kompletterande innehåll om musikskapande, kreativt arbete och livet som oberoende artist.</p>    
+<section>    
+  <div class="section-title">Om projektet</div>    
+  <div class="project-box">    
+    <p><strong>Historien Bakom Musiken</strong> är en svensk podcast om hur musik faktiskt skapas, berättad ur perspektivet av en aktiv artist och producent.</p>    
+    <p>Podcasten lanserades i december 2023 och har nått förstaplats (#1) på Spotify-topplistor i Sverige under 2023 och 2024.</p>    
+    <p>Projektet omfattar podcastavsnitt, utdrag och kompletterande innehåll om musikskapande, kreativt arbete och livet som oberoende artist.</p>    
 
-<div class="project-meta">    
-  📍 Projekt: Historien Bakom Musiken<br>    
-  🎙️ Genre: Musik / Podcast / Kreativt skapande    
-</div>
-
-  </div>    
-</section>    <section>    
-  <div class="section-title">Utvalda milstolpar</div>      <div class="posts">    <div class="embed-wrap">    
-  <blockquote class="instagram-media"    
-    data-instgrm-permalink="https://www.instagram.com/p/C1aKhNxL0S9/"    
-    data-instgrm-version="14">    
-  </blockquote>    
-</div>    
-
-<div class="embed-wrap">    
-  <blockquote class="instagram-media"    
-    data-instgrm-permalink="https://www.instagram.com/p/DDKsFTAM7rC/"    
-    data-instgrm-version="14">    
-  </blockquote>    
-</div>
-
+    <div class="project-meta">    
+      📍 Projekt: Historien Bakom Musiken<br>    
+      🎙️ Genre: Musik / Podcast / Kreativt skapande    
+    </div>
   </div>    
 </section>    
+
+<section>    
+  <div class="section-title">Utvalda milstolpar</div>    
+  <div class="posts">    
+    <div class="embed-wrap">    
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C1aKhNxL0S9/" data-instgrm-version="14"></blockquote>    
+    </div>    
+    <div class="embed-wrap">    
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DDKsFTAM7rC/" data-instgrm-version="14"></blockquote>    
+    </div>    
+  </div>    
+</section>    
+
+<section>
+  <div class="section-title">Kompletterande visuella bevis – 29 december 2023</div>
+  <div class="evidence-stack">
+    <img src="/assets/images/spotify_#46_29dec_2023.jpg" alt="Spotify-topplista #46 – 29 december 2023">
+    <img src="/assets/images/spotify_#50_29dec_2023.jpg" alt="Spotify-topplista #50 – 29 december 2023">
+    <img src="/assets/images/spotify_Toppoddar_29_2023.jpg" alt="Spotify Toppoddar – 29 december 2023">
+  </div>
+</section>
+
 <footer>    
   © ℗ 2023 – 2026 Historien Bakom Musiken – Oberoende Dokumentation    
 </footer>    
+
 </div>    
+
 <script async src="https://www.instagram.com/embed.js"></script>    
 </body>    
-</html> 
+</html>
