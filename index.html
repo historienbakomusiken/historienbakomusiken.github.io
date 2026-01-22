@@ -1,207 +1,291 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Historien bakom musiken – Meriter & dokumentation</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
-/* ===== NYA FÄRGER (FRÅN NY DESIGN) ===== */
 :root{
   --bg:#0b0e14;
-  --panel:#121826;
-  --panel-dark:#0d121c;
   --gold:#d4b36a;
   --gold-soft:#bfa25c;
   --text:#e6e6e6;
   --muted:#9aa0a6;
 }
 
-/* ===== BAS ===== */
-body {
-  margin: 0;
-  padding: 0;
-  background: radial-gradient(ellipse at top,#141a26 0%,#0b0e14 60%);
-  color: var(--text);
-  font-family: "Segoe UI", Roboto, Arial, sans-serif;
-  line-height: 1.7;
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  background:radial-gradient(ellipse at top,#141a26 0%,#0b0e14 60%);
+  color:var(--text);
+  font-family:Inter,system-ui,Arial,sans-serif;
+  line-height:1.6;
 }
 
-.container {
-  max-width: 900px;
-  margin: 40px auto;
-  background: linear-gradient(180deg,var(--panel),var(--panel-dark));
-  padding: 40px 30px;
-  border-radius: 6px;
-  border: 1px solid rgba(212,179,106,0.25);
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 24px 100px;
 }
 
-/* ===== FOLLOW-SEKTION – SAMMA STIL SOM ORIGINAL ===== */
-.follow-section {
-  text-align: center;
-  margin: 60px auto 40px;
-  max-width: 800px;
+header{
+  text-align:center;
+  margin-bottom:50px;
 }
 
-.follow-section h2 {
-  color: var(--gold);
-  font-weight: 600;
-  margin-bottom: 35px;
-  border: none;
-  padding-bottom: 0;
-  font-size: 26px;
+header h1{
+  font-family:"Playfair Display",serif;
+  color:var(--gold);
+  font-size:42px;
+  margin-bottom:12px;
 }
 
-/* Ikonrad */
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
+header p{
+  color:var(--muted);
+  font-size:16px;
 }
 
-/* Ikon-wrapper */
-.social-icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: transform 0.3s ease;
+.section-title{
+  font-family:"Playfair Display",serif;
+  color:var(--gold-soft);
+  font-size:26px;
+  margin:0 auto 22px auto;
+  max-width:820px;
+  text-align:left;
 }
 
-.social-icon:hover {
-  transform: translateY(-5px);
+.project-box{
+  max-width:820px;
+  margin:0 auto 70px auto;
+  padding:32px 36px;
+  background:linear-gradient(180deg,#121826,#0d121c);
+  border:1px solid rgba(212,179,106,0.22);
+  border-radius:18px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.45);
 }
 
-.social-icon a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
+.project-box p{ margin-bottom:14px; }
+
+.project-meta{
+  margin-top:18px;
+  color:var(--gold-soft);
+  font-size:14px;
 }
 
-/* Cirklar – exakt samma beteende som original */
-.icon-container {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background: rgba(212,179,106,0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10px;
-  transition: background-color 0.3s ease;
+.posts{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:40px;
 }
 
-.social-icon:hover .icon-container {
-  background: rgba(212,179,106,0.35);
+.embed-wrap{
+  background:linear-gradient(180deg,#121826,#0d121c);
+  border:1px solid rgba(212,179,106,0.25);
+  border-radius:16px;
+  padding:18px 14px 22px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.45);
 }
 
-/* SVG-ikoner */
-.icon-container svg {
-  width: 34px;
-  height: 34px;
-  fill: var(--text);
+.embed-wrap::before{
+  content:"Dokumenterat genomslag";
+  display:block;
+  font-size:12px;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--gold-soft);
+  margin-bottom:14px;
 }
 
-/* Text under ikon */
-.social-icon span {
-  color: var(--muted);
-  font-size: 14px;
-  font-weight: 500;
-  margin-top: 5px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+/* ===== FÖLJ PROJEKTET (KORREKT MIGRERAD) ===== */
+
+.follow-section{
+  max-width:820px;
+  margin:90px auto 70px auto;
+  text-align:center;
 }
 
-/* Mobil */
-@media (max-width: 768px) {
-  .social-icons { gap: 30px; }
-  .icon-container { width: 60px; height: 60px; }
-  .icon-container svg { width: 30px; height: 30px; }
+.follow-section h2{
+  font-family:"Playfair Display",serif;
+  color:var(--gold);
+  font-size:28px;
+  margin-bottom:32px;
 }
 
-@media (max-width: 480px) {
-  .social-icons { gap: 22px; }
-  .icon-container { width: 52px; height: 52px; }
-  .icon-container svg { width: 26px; height: 26px; }
+.social-icons{
+  display:flex;
+  justify-content:center;
+  gap:48px;
+  flex-wrap:wrap;
+}
+
+.social-icon{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  transition:transform .3s ease;
+}
+
+.social-icon:hover{
+  transform:translateY(-6px);
+}
+
+.social-icon a{
+  text-decoration:none;
+  color:var(--text);
+}
+
+.icon-container{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  background:rgba(212,179,106,0.14);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:10px;
+  transition:background .3s ease;
+}
+
+.social-icon:hover .icon-container{
+  background:rgba(212,179,106,0.32);
+}
+
+.icon-container svg{
+  width:34px;
+  height:34px;
+  fill:currentColor;
+}
+
+.social-icon span{
+  color:var(--muted);
+  font-size:14px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+  margin-top:90px;
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
 }
 </style>
 </head>
 
 <body>
-
 <div class="container">
 
-  <!-- ===== FÖLJ PROJEKTET ===== -->
-  <div class="follow-section">
-    <h2>Följ projektet</h2>
+<header>
+  <h1>Historien bakom musiken</h1>
+  <p>Meritarkiv & offentlig dokumentation av projektets utveckling</p>
+</header>
 
-    <div class="social-icons">
+<section>
+  <div class="section-title">Om projektet</div>
+  <div class="project-box">
+    <p><strong>Historien bakom musiken</strong> är en svensk podcast om hur musik faktiskt skapas – berättad ur perspektivet av en aktiv artist och producent.</p>
+    <p>Projektet lanserades i december 2023 och har nått förstaplats på Spotify-topplistor i Sverige under både 2023 och 2024.</p>
+    <p>Fokus ligger på processen bakom färdiga verk: idé, produktion, arrangemang, beslut och verklighet.</p>
+    <div class="project-meta">🎙️ Podcast · Musikskapande · Oberoende produktion</div>
+  </div>
+</section>
 
-      <!-- Instagram -->
-      <div class="social-icon">
-        <a href="https://www.instagram.com/historienbakommusiken" target="_blank">
-          <div class="icon-container">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-              <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141z"/>
-            </svg>
-          </div>
-          <span>Instagram</span>
-        </a>
-      </div>
-
-      <!-- Facebook -->
-      <div class="social-icon">
-        <a href="https://www.facebook.com/share/17mCscac1o/" target="_blank">
-          <div class="icon-container">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <path d="M504 256C504 119 393 8 256 8S8 119 8 256z"/>
-            </svg>
-          </div>
-          <span>Facebook</span>
-        </a>
-      </div>
-
-      <!-- Spotify -->
-      <div class="social-icon">
-        <a href="https://open.spotify.com/show/4iNHYPETp0acYF9bdagB2B" target="_blank">
-          <div class="icon-container">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-              <path d="M248 8C111.1 8 0 119.1 0 256z"/>
-            </svg>
-          </div>
-          <span>Spotify</span>
-        </a>
-      </div>
-
-      <!-- TikTok -->
-      <div class="social-icon">
-        <a href="https://www.tiktok.com/@historienbakommusiken" target="_blank">
-          <div class="icon-container">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-              <path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25z"/>
-            </svg>
-          </div>
-          <span>TikTok</span>
-        </a>
-      </div>
-
-      <!-- YouTube (NY – SAMMA STIL) -->
-      <div class="social-icon">
-        <a href="https://www.youtube.com/@historienbakommusiken" target="_blank">
-          <div class="icon-container">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-              <path d="M549.655 124.083c-6.281-23.65-24.787-42.276z"/>
-            </svg>
-          </div>
-          <span>YouTube</span>
-        </a>
-      </div>
-
+<section>
+  <div class="section-title">Utvalda milstolpar</div>
+  <div class="posts">
+    <div class="embed-wrap">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/C1aKhNxL0S9/"
+        data-instgrm-version="14"></blockquote>
+    </div>
+    <div class="embed-wrap">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DDKsFTAM7rC/"
+        data-instgrm-version="14"></blockquote>
     </div>
   </div>
+</section>
+
+<!-- FÖLJ PROJEKTET -->
+<div class="follow-section">
+  <h2>Följ projektet</h2>
+  <div class="social-icons">
+
+    <!-- Instagram -->
+    <div class="social-icon">
+      <a href="https://www.instagram.com/historienbakommusiken" target="_blank">
+        <div class="icon-container">
+          <!-- Instagram SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141z"/>
+          </svg>
+        </div>
+        <span>Instagram</span>
+      </a>
+    </div>
+
+    <!-- Facebook -->
+    <div class="social-icon">
+      <a href="https://www.facebook.com/share/17mCscac1o/" target="_blank">
+        <div class="icon-container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48z"/>
+          </svg>
+        </div>
+        <span>Facebook</span>
+      </a>
+    </div>
+
+    <!-- Spotify -->
+    <div class="social-icon">
+      <a href="https://open.spotify.com/show/4iNHYPETp0acYF9bdagB2B" target="_blank">
+        <div class="icon-container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+            <path d="M248 8C111.1 8 0 119.1 0 256s111.1 248 248 248 248-111.1 248-248z"/>
+          </svg>
+        </div>
+        <span>Spotify</span>
+      </a>
+    </div>
+
+    <!-- TikTok -->
+    <div class="social-icon">
+      <a href="https://www.tiktok.com/@historienbakommusiken" target="_blank">
+        <div class="icon-container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38z"/>
+          </svg>
+        </div>
+        <span>TikTok</span>
+      </a>
+    </div>
+
+    <!-- YouTube -->
+    <div class="social-icon">
+      <a href="https://www.youtube.com/@historienbakommusiken" target="_blank">
+        <div class="icon-container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+            <path d="M549.655 124.083c-6.281-23.65-24.787-42.276z"/>
+          </svg>
+        </div>
+        <span>YouTube</span>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  © 2026 Historien bakom musiken – Oberoende dokumentation
+</footer>
 
 </div>
 
+<script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
