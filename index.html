@@ -1,235 +1,197 @@
-<!DOCTYPE html>
-<html lang="sv">
-<huvud>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=enhetsbredd, initial-skala=1.0"/>
-<title>Historien Bakom Musiken – Meriter & dokumentation</title>
+<!DOCTYPE html>    
+<html lang="sv">    
+<head>    
+<meta charset="UTF-8" />    
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>    
+<title>Historien Bakom Musiken – Meriter & dokumentation</title>    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">    <!-- Favicon -->    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">    
+<link rel="shortcut icon" href="/favicon.png">    
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">    
+<meta name="theme-color" content="#0b0e14">    <style>    
+:root{    
+  --bg:#0b0e14;    
+  --gold:#d4b36a;    
+  --gold-soft:#bfa25c;    
+  --text:#e6e6e6;    
+  --muted:#9aa0a6;    
+}    
+    
+*{box-sizing:border-box;margin:0;padding:0}    
+    
+body{    
+  background:radial-gradient(ellipse at top,#141a26 0%,#0b0e14 60%);    
+  color:var(--text);    
+  font-family:Inter,system-ui,Arial,sans-serif;    
+  line-height:1.6;    
+}    
+    
+.container{    
+  max-width:1100px;    
+  margin:auto;    
+  padding:60px 24px 100px;    
+}    
+    
+header{    
+  text-align:center;    
+  margin-bottom:50px;    
+}    
+    
+/* LOGOTYP – plats reserverad */    
+.site-logo{    
+  display:block;    
+  margin:0 auto 26px auto;    
+  max-width:180px;    
+  width:100%;    
+  opacity:0.95;    
+}    
+    
+header h1{    
+  font-family:"Playfair Display",serif;    
+  color:var(--gold);    
+  font-size:42px;    
+  letter-spacing:0.5px;    
+  margin-bottom:12px;    
+}    
+    
+header p{    
+  color:var(--muted);    
+  font-size:16px;    
+}    
+    
+section{    
+  display:block;    
+}    
+    
+/* FIXAD RUBRIKPLACERING */    
+.section-title{    
+  font-family:"Playfair Display",serif;    
+  color:var(--gold-soft);    
+  font-size:26px;    
+  margin:0 auto 22px auto;    
+  max-width:820px;    
+  text-align:left;    
+}    
+    
+/* Om projektet */    
+.project-box{    
+  max-width:820px;    
+  margin:0 auto 70px auto;    
+  padding:32px 36px;    
+  background:linear-gradient(180deg,#121826,#0d121c);    
+  border:1px solid rgba(212,179,106,0.22);    
+  border-radius:18px;    
+  box-shadow:0 20px 60px rgba(0,0,0,0.45);    
+}    
+    
+.project-box p{    
+  margin-bottom:14px;    
+  color:#e3e3e3;    
+}    
+    
+.project-meta{    
+  margin-top:18px;    
+  color:var(--gold-soft);    
+  font-size:14px;    
+  letter-spacing:0.04em;    
+}    
+    
+.posts{    
+  display:grid;    
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));    
+  gap:40px;    
+  align-items:start;    
+}    
+    
+/* Card wrapper */    
+.embed-wrap{    
+  background:linear-gradient(180deg,#121826,#0d121c);    
+  border:1px solid rgba(212,179,106,0.25);    
+  border-radius:16px;    
+  padding:18px 14px 22px;    
+  box-shadow:0 20px 60px rgba(0,0,0,0.45);    
+  overflow:hidden;    
+}    
+    
+.embed-wrap::before{    
+  content:"Dokumenterat genomslag";    
+  display:block;    
+  font-size:12px;    
+  letter-spacing:0.12em;    
+  text-transform:uppercase;    
+  color:var(--gold-soft);    
+  margin-bottom:14px;    
+}    
+    
+/* Instagram embed fix */    
+.embed-wrap .instagram-media{    
+  max-width:100% !important;    
+  width:100% !important;    
+  margin:0 auto !important;    
+  border-radius:10px !important;    
+}    
+    
+.embed-wrap iframe{    
+  max-width:100% !important;    
+  width:100% !important;    
+}    
+    
+/* Mobiloptimering */    
+@media (max-width:600px){    
+  header h1{ font-size:32px; }    
+    
+  .container{ padding:40px 16px 80px; }    
+    
+  .embed-wrap{ padding:14px 10px 18px; }    
+    
+  .project-box{ padding:22px 18px 26px; }    
+    
+  .site-logo{ max-width:140px; }    
+}    
+    
+footer{    
+  margin-top:90px;    
+  text-align:center;    
+  color:var(--muted);    
+  font-size:13px;    
+}    
+</style>    </head>    
+<body>    <div class="container">    <header>    
+  <!-- LOGOTYP: aktivera när filen finns -->    <img src="/assets/logo.png"    
+alt="Historien bakom musiken – logotyp"    
+class="site-logo">
 
-<länk href=" https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap " rel="stylesheet">
+  <h1>Historien bakom musiken</h1>    
+  <p>Meritarkiv & offentlig dokumentation av projektets utveckling och genomslag</p>    
+</header>    <section>    
+  <div class="section-title">Om projektet</div>      <div class="project-box">    
+    <p><strong>Historien Bakom Musiken</strong> är en svensk podcast om hur musik faktiskt skapas, berättad ur perspektivet av en aktiv artist och producent.</p>    <p>Podcasten lanserades i december 2023 och har nått förstaplats (#1) på Spotify-topplistor i Sverige under 2023 och 2024. Den följs av lyssnare som vill förstå processen bakom färdiga låt[...]</p>    
 
-<!-- Favicon -->
-<länk rel="ikon" type="bild/png" sizes="32x32" href="/favicon.png">
-<länk rel="genvägsikon" href="/favicon.png">
-<länk rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
-<meta name="theme-color" content="#0b0e14">
+<p>Projektet omfattar podcastavsnitt, utdrag och kompletterande innehåll om musikskapande, kreativt arbete och livet som oberoende artist.</p>    
 
-<stil>
-:rot{
---bg:#0b0e14;
---guld:#d4b36a;
---guld-mjuk:#bfa25c;
---text:#e6e6e6;
---dämpad:#9aa0a6;
-}
-
-*{box-sizing:border-box;margin:0;padding:0}
-
-kropp{
-bakgrund: radiell-gradient(ellips överst,#141a26 0%,#0b0e14 60%);
-färg:var(--text);
-font-family:Inter,system-ui,Arial,sans-serif;
-radhöjd: 1,6;
-}
-
-.behållare{
-maxbredd: 1100px;
-marginal:auto;
-utfyllnad: 60px 24px 100px;
-}
-
-rubrik{
-text-justera:centrera;
-marginal-nederst:50px;
-}
-
-.site-logotyp{
-visa:blockera;
-marginal:0 auto 26px auto;
-maxbredd: 180px;
-bredd: 100 %;
-opacitet: 0,95;
-}
-
-rubrik h1{
-font-family:"Playfair Display",serif;
-färg:var(--guld);
-teckenstorlek: 42px;
-bokstavsavstånd: 0,5px;
-marginal-nederst:12px;
-}
-
-rubrik p{
-färg:var(--dämpad);
-teckenstorlek: 16px;
-}
-
-.avsnittstitel{
-font-family:"Playfair Display",serif;
-färg:var(--guld-mjuk);
-teckenstorlek: 26px;
-marginal:0 auto 22px auto;
-maxbredd: 820px;
-text-justera:vänster;
-}
-
-.projekt-låda{
-maxbredd: 820px;
-marginal:0 auto 70px auto;
-utfyllnad: 32px 36px;
-bakgrund:linjär-gradient(180grader,#121826,#0d121c);
-kantlinje: 1px solid rgba(212,179,106,0.22);
-kantradius: 18px;
-box-shadow:0 20px 60px rgba(0,0,0,0.45);
-}
-
-.projekt-låda p{
-marginal-nederst:14px;
-}
-
-.projekt-meta{
-marginal-topp:18px;
-färg:var(--guld-mjuk);
-fontstorlek: 14px;
-bokstavsavstånd: 0,04 em;
-}
-
-.inlägg{
-visa:rutnät;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-mellanrum: 40px;
-}
-
-.embed-wrap{
-bakgrund:linjär-gradient(180grader,#121826,#0d121c);
-kantlinje: 1px solid rgba(212,179,106,0.25);
-kantradius: 16px;
-utfyllnad: 18px 14px 22px;
-box-shadow:0 20px 60px rgba(0,0,0,0.45);
-}
-
-.embed-wrap::before{
-innehåll:"Dokumenterat genomslag";
-visa:blockera;
-fontstorlek: 12px;
-bokstavsavstånd: 0,12 em;
-text-transform:versaler;
-färg:var(--guld-mjuk);
-marginal-nederst:14px;
-}
-
-/* ===== NY SEKTION: SPOTIFY-BEVIS ===== */
-
-.bevislåda{
-maxbredd: 820px;
-marginal:0 auto 80px auto;
-utfyllnad: 32px;
-bakgrund:linjär-gradient(180grader,#121826,#0d121c);
-kantlinje: 1px solid rgba(212,179,106,0.22);
-kantradius: 18px;
-box-shadow:0 20px 60px rgba(0,0,0,0.45);
-}
-
-.bevislåda p{
-färg:var(--dämpad);
-teckenstorlek: 15px;
-marginal-nederst:24px;
-}
-
-.bevisbilder{
-skärm:flex;
-flex-riktning:kolumn;
-mellanrum: 26px;
-}
-
-.bevisbilder img{
-bredd: 100 %;
-kantradius: 14px;
-kantlinje: 1px solid rgba(212,179,106,0.25);
-box-shadow:0 14px 40px rgba(0,0,0,0.5);
-}
-
-/* Mobil */
-@media (maxbredd: 600px) {
-rubrik h1{ font-size:32px; }
-.container{ utfyllnad:40px 16px 80px; }
-.projekt-låda,
-.evidence-box{ utfyllnad:22px 18px; }
-.site-logotyp{ maxbredd: 140px; }
-}
-
-sidfot
-marginal-topp:90px;
-text-justera:centrera;
-färg:var(--dämpad);
-fontstorlek: 13px;
-}
-</stil>
-</huvud>
-
-<kropp>
-
-<div class="behållare">
-
-<rubrik>
-<img src="/assets/logo.png" alt="Historien bakom musiken – logotyp" class="site-logo">
-<h1>Historien bakom musiken</h1>
-<p>Meritarkiv & offentlig dokumentation av projektets utveckling och genomslag</p>
-</rubrik>
-
-<avsnitt>
-<div class="section-title">Om projektet</div>
-<div class="projekt-låda">
-<p><strong>Historien Bakom Musiken</strong> är en svensk podcast om hur musik faktiskt skapas, berättad ur perspektivet av en aktiv artist och producent.</p>
-<p>Podcasten lanserades i december 2023 och har nått förstaplats (#1) på Spotify-topplistor i Sverige under 2023 och 2024.</p>
-<div class="projekt-meta">
-📍 Projekt: Historien Bakom Musiken<br>
-🎙️ Genre: Musik / Podcast / Kreativt skapande
-</div>
-</div>
-</avsnitt>
-
-<avsnitt>
-<div class="section-title">Utvalda milstolpar</div>
-<div class="inlägg">
-<div class="embed-wrap">
-<blockquote class="instagram-media" data-instgrm-permalink=" https://www.instagram.com/p/C1aKhNxL0S9/ " data-instgrm-version="14"></blockquote>
-</div>
-<div class="embed-wrap">
-<blockquote class="instagram-media" data-instgrm-permalink=" https://www.instagram.com/p/DDKsFTAM7rC/ " data-instgrm-version="14"></blockquote>
-</div>
-</div>
-</avsnitt>
-
-<!-- ===== NY BEVISSEKTION ===== -->
-
-<avsnitt>
-<div class="section-title">
-Kompletterande bevis: Placering i Spotifys Toppoddar (29 december 2023)
+<div class="project-meta">    
+  📍 Projekt: Historien Bakom Musiken<br>    
+  🎙️ Genre: Musik / Podcast / Kreativt skapande    
 </div>
 
-<div class="bevislåda">
-<p>
-Följande skärmdumpar dokumentar projektets närvaro och placering i
-Spotifys topplistor i Sverige per den 29 december 2023.
-Materialet är sparat i originalformat och presenteras här som kompletterande,
-tidsstämplade bevis.
-</p>
+  </div>    
+</section>    <section>    
+  <div class="section-title">Utvalda milstolpar</div>      <div class="posts">    <div class="embed-wrap">    
+  <blockquote class="instagram-media"    
+    data-instgrm-permalink="https://www.instagram.com/p/C1aKhNxL0S9/"    
+    data-instgrm-version="14">    
+  </blockquote>    
+</div>    
 
-<div class="bevisbilder">
-<img src="/assets/images/spotify-1.png" alt="Spotify Toppoddar – placering december 2023">
-<img src="/assets/images/spotify-2.png" alt="Spotify topplista – Historien Bakom Musiken">
-<img src="/assets/images/spotify-3.png" alt="Spotify Sverige – dokumentad placering">
-</div>
-</div>
-</avsnitt>
-
-<sidfot>
-© ℗ 2023 – 2026 Historien Bakom Musiken – Oberoende Dokumentation
-</sidfot>
-
+<div class="embed-wrap">    
+  <blockquote class="instagram-media"    
+    data-instgrm-permalink="https://www.instagram.com/p/DDKsFTAM7rC/"    
+    data-instgrm-version="14">    
+  </blockquote>    
 </div>
 
-<script async src=" https://www.instagram.com/embed.js "></script>
-
-</body>
-</html>
+  </div>    
+</section>    
+<footer>    
+  © ℗ 2023 – 2026 Historien Bakom Musiken – Oberoende Dokumentation    
+</footer>    </div>    <script async src="https://www.instagram.com/embed.js"></script>    
+</body>    
+</html> 
