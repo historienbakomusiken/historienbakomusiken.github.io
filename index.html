@@ -312,8 +312,8 @@ footer{
   if (!container) return;
 
   const slides = [...container.querySelectorAll('.story-slide')];
-  const segs = [...container.querySelectorAll('.progress-seg')];
-  const fills = [...container.querySelectorAll('.progress-fill')];
+  const segs   = [...container.querySelectorAll('.progress-seg')];
+  const fills  = [...container.querySelectorAll('.progress-fill')];
   let current = 0;
 
   function setActive(i){
@@ -348,6 +348,12 @@ footer{
     const x=e.clientX-r.left;
     if(x<r.width*0.45) setActive(current-1);
     else if(x>r.width*0.55) setActive(current+1);
+  });
+
+  // ✅ Keyboard navigation (desktop)
+  window.addEventListener('keydown', e=>{
+    if(e.key === 'ArrowRight') setActive(current+1);
+    if(e.key === 'ArrowLeft')  setActive(current-1);
   });
 
   setActive(0);
