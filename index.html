@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Historien Bakom Musiken – Meriter & dokumentation</title>
+<title>Historien Bakom Musiken – Dokumentation & verifiering</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
@@ -45,12 +45,31 @@ header p{color:var(--muted);font-size:16px;}
 }
 .project-box{
   max-width:820px;
-  margin:0 auto 70px auto;
+  margin:0 auto 40px auto;
   padding:32px 36px;
   background:linear-gradient(180deg,#121826,#0d121c);
   border:1px solid rgba(212,179,106,0.22);
   border-radius:18px;
   box-shadow:0 20px 60px rgba(0,0,0,0.45);
+}
+.verification-summary {
+  max-width:820px;
+  margin:0 auto 40px auto;
+  padding:28px 32px;
+  background:linear-gradient(180deg,#1a1f2b,#121826);
+  border-left:4px solid var(--gold);
+  border-radius:12px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.45);
+}
+.verification-summary strong {
+  color:var(--gold-soft);
+  font-size:18px;
+  display:block;
+  margin-bottom:15px;
+  letter-spacing:0.5px;
+}
+.verification-summary p {
+  margin-bottom:12px;
 }
 .project-meta{margin-top:18px;color:var(--gold-soft);font-size:14px;}
 .posts{
@@ -151,16 +170,25 @@ footer{
 <header>
   <img src="/assets/logo.png" class="site-logo" alt="Historien bakom musiken – logotyp">
   <h1>Historien Bakom Musiken</h1>
-  <p>Meritarkiv & offentlig dokumentation av projektets utveckling och genomslag</p>
+  <p>Dokumentation & verifiering av projektets utveckling och genomslag</p>
 </header>
 
+<!-- NY SEKTION: Verifieringsöversikt - sparar reviewern 20 sekunder -->
+<section class="verification-summary">
+  <strong>📋 Verifieringsöversikt</strong>
+  <p><strong>Historien Bakom Musiken</strong> är en oberoende svensk musikpodcast som nådde <strong>#1 på Spotifys topplistor i Sverige</strong> kort efter lansering i december 2023 och har fortsatt visa dokumenterad publikökning (<strong>+458 %</strong> år 2025) utan nya publicerade avsnitt.</p>
+  <p>Projektet skapades och drivs av musikskaparen och podcastproducenten bakom Instagramkontot <strong>@historienbakommusiken</strong>. Denna sida fungerar som offentlig dokumentation av projektets utveckling, genomslag och verifierbar historik.</p>
+  <p style="color:var(--muted); font-size:14px; margin-top:15px;">✓ #1 Spotify Topplistor (dec 2023) • ✓ +458% publiktillväxt (2025) • ✓ Oberoende dokumentation med tidsstämplar</p>
+</section>
+
+<!-- KONTONNEHAVARE & AVSÄNDARE - explicit koppling -->
 <section>
-  <div class="section-title">Om projektet</div>
-  <div class="project-box">
-    <p><strong>Historien Bakom Musiken</strong> är en svensk podcast om hur musik faktiskt skapas.</p>
-    <p>Podcasten lanserades i december 2023 och har nått förstaplats (#1) på Spotify-topplistor i Sverige.</p>
-    <div class="project-meta">
-      📍 Projekt: Historien Bakom Musiken<br>
+  <div class="section-title">Kontoinnehavare & avsändare</div>
+  <div class="project-box" style="padding:24px 32px;">
+    <p><strong style="color:var(--gold);">@historienbakommusiken</strong> — officiellt Instagramkonto för podcasten.</p>
+    <p style="margin-top:12px;">Projektet skapades och drivs av musikskaparen och podcastproducenten bakom kontot. Allt material på denna sida härrör från detta konto och projektets egna dokumentation.</p>
+    <div class="project-meta" style="margin-top:20px;">
+      📍 Projektägare: Historien Bakom Musiken / @historienbakommusiken<br>
       🎙️ Genre: Musik / Podcast / Kreativt skapande
     </div>
   </div>
@@ -224,7 +252,7 @@ footer{
     </div>
   </div>
 
-  <!-- NY SEKTION -->
+  <!-- FORTSATT UTVECKLING -->
   <div class="section-title">Fortsatt dokumenterad utveckling – sammanhängande berättelse</div>
 
   <div class="single-evidence">
@@ -251,12 +279,13 @@ footer{
   <div class="documentation-note" style="max-width:820px;margin:0 auto;">
     <strong>Sammanfattande dokumentation</strong>
     Det visuella materialet ovan dokumenterar projektets genomslag och tillhörande händelser över tid.<br>
-    Materialet omfattar både tidiga genombrott och senare verifierad tillväxt, sammanfogat till en sammanhängande dokumentationskedja.
+    Materialet omfattar både tidiga genombrott och senare verifierad tillväxt, sammanfogat till en sammanhängande dokumentationskedja.<br><br>
+    <strong style="color:var(--gold);">Koppling till Instagram:</strong> Allt material härrör från @historienbakommusiken eller har skapats av kontoinnehavaren som en del av projektets löpande dokumentation.
   </div>
 </section>
 
 <footer>
-© ℗ 2023 – 2026 Historien Bakom Musiken – Oberoende Dokumentation
+© ℗ 2023 – 2026 Historien Bakom Musiken – Oberoende Dokumentation – @historienbakommusiken
 </footer>
 
 </div>
